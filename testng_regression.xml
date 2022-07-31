@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="/Users/monikanawani/Personal_practice/MyStore/src/test/java/com/mystore/testcases" thread-count="5">
+        <parameter name="browser" value="chrome"></parameter>
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.mystore.testcases.AccountCreationPageTest">
+                <methods>
+                    <include name="verifyCreateAccountPageHeader"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.AddToCartPageTest">
+                <methods>
+                    <include name="verifyProductIsDisplayed"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.IndexPageTest">
+                <methods>
+                    <include name="verifyLogo"/>
+                    <include name="verifyPageTitle"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.LoginPageTest">
+                <methods>
+                    <include name="verifyLogin"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.MyAccountPageTest">
+                <methods>
+                    <include name="verifyWishlist"/>
+                    <include name="orderHistory"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.OrderPageTest">
+                <methods>
+                    <include name="verifyTotalPrice"/>
+                </methods>
+            </class>
+            <class name="com.mystore.testcases.SearchResultPageTest">
+                <methods>
+                    <include name="verifyProductIsDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
